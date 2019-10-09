@@ -10,8 +10,6 @@ passwordArray = {adminAccount: adminPassword, "guest": 883, "james":1236}
 ticketPointCost = 5
 totalMoney = 100
 userAccount = ""
-userPassword = 0
-intUserChoice = 0
 
 def userChoiceHandler(userChoice):
     if userChoice == "1":
@@ -19,7 +17,7 @@ def userChoiceHandler(userChoice):
     elif userChoice == "2":
         login()
     elif userChoice == "3":
-        doThis()
+        viewEvents()
     elif userChoice == "4":
         doThis()
     elif userChoice == "5":
@@ -32,6 +30,9 @@ def userChoiceHandler(userChoice):
 
 def doThis():
     print("should probably do this")
+
+def viewTransactions():
+    print("No Transactions Yet")
 
 def register():
     print("Please Enter Your Desired Username")
@@ -84,7 +85,7 @@ def start():
     print("If you have any issues or need any help contact us at nerd@columbusstate.edu\n\n")
     print("Enter a number that matches your choice")
     while userChoice != "7":
-        print("Register 1, Login 2, View Events 3, Purchase Tickets 4, Make A File 5, Run A File 6, Exit 7")
+        print("Register 1, Login 2, View Transactions 3, Purchase Tickets 4, Make A File 5, Run A File 6, Exit 7\n\n")
         userChoice = input()
         intUserChoice = int(userChoice)
         if userChoice == "7":
